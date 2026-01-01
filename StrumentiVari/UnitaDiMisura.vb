@@ -63,4 +63,12 @@ Public Class UnitaDiMisura
         TxtAVal.Text = risultato.ToString("G", New CultureInfo("it-IT"))
     End Sub
 
+    Private Sub CambiaPuntoInVirgola(sender As Object, e As KeyPressEventArgs) Handles TxtDaVal.KeyPress, TxtAVal.KeyPress
+        If e.KeyChar = "." Then
+            If sender.Text.contains(",") Then e.Handled = True
+            e.KeyChar = ","
+        ElseIf e.KeyChar = "," Then
+            If sender.Text.contains(",") Then e.Handled = True
+        End If
+    End Sub
 End Class
