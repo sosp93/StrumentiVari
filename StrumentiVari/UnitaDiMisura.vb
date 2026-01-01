@@ -71,4 +71,17 @@ Public Class UnitaDiMisura
             If sender.Text.contains(",") Then e.Handled = True
         End If
     End Sub
+
+    Private Sub NumericValidation(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TxtAVal.Validating, TxtDaVal.Validating
+        'Dim pattern = "[0-9][0-9]*(\,[0-9]+)?"
+        If IsNumeric(sender.Text) Or sender.text = Nothing Then
+            sender.text = CDbl(sender.text).ToString("G", New CultureInfo("it-IT"))
+        Else
+            e.Cancel = True
+            MsgBox("Puoi inserire solo valori numerici" & vbCrLf & vbCrLf & "Cifre e al massimo una virgola", vbObjectError, "ERRORE")
+            sender.SelectAll
+        End If
+    End Sub
+
+
 End Class
