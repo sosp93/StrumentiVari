@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing.Text
+Imports System.Globalization
 Imports System.Security.Cryptography.X509Certificates
 
 Public Class UnitaDiMisura
@@ -59,6 +60,7 @@ Public Class UnitaDiMisura
 
         risultato = iniziale / coefficienteDa * coefficienteA
 
-        TxtAVal.Text = risultato.ToString
+        TxtAVal.Text = risultato.ToString("G", New CultureInfo("it-IT"))
     End Sub
+
 End Class
