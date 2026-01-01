@@ -74,7 +74,10 @@ Public Class UnitaDiMisura
 
     Private Sub NumericValidation(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TxtAVal.Validating, TxtDaVal.Validating
         'Dim pattern = "[0-9][0-9]*(\,[0-9]+)?"
-        If IsNumeric(sender.Text) Or sender.text = Nothing Then
+        If sender.text = Nothing Then
+            e.Cancel = False
+        ElseIf IsNumeric(sender.Text) Then
+            e.Cancel = False
             sender.text = CDbl(sender.text).ToString("G", New CultureInfo("it-IT"))
         Else
             e.Cancel = True
