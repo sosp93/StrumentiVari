@@ -27,62 +27,69 @@ Partial Class UnitaDiMisura
         CboxDaUm = New ComboBox()
         CboxAUm = New ComboBox()
         RichTextBox1 = New RichTextBox()
-        Button1 = New Button()
+        BtnCalcola = New Button()
         SuspendLayout()
         ' 
         ' TxtDaVal
         ' 
+        TxtDaVal.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold)
         TxtDaVal.Location = New Point(12, 57)
         TxtDaVal.Name = "TxtDaVal"
-        TxtDaVal.Size = New Size(125, 27)
+        TxtDaVal.Size = New Size(205, 43)
         TxtDaVal.TabIndex = 1
         ' 
         ' TxtAVal
         ' 
-        TxtAVal.Location = New Point(367, 57)
+        TxtAVal.BackColor = SystemColors.Window
+        TxtAVal.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold)
+        TxtAVal.Location = New Point(12, 109)
         TxtAVal.Name = "TxtAVal"
-        TxtAVal.Size = New Size(125, 27)
+        TxtAVal.ReadOnly = True
+        TxtAVal.Size = New Size(205, 43)
         TxtAVal.TabIndex = 3
         ' 
         ' CboxDaUm
         ' 
+        CboxDaUm.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold)
         CboxDaUm.FormattingEnabled = True
-        CboxDaUm.Location = New Point(143, 57)
+        CboxDaUm.Location = New Point(223, 57)
         CboxDaUm.Name = "CboxDaUm"
-        CboxDaUm.Size = New Size(151, 28)
+        CboxDaUm.Size = New Size(112, 45)
         CboxDaUm.TabIndex = 2
         ' 
         ' CboxAUm
         ' 
+        CboxAUm.Font = New Font("Segoe UI Semibold", 16.2F, FontStyle.Bold)
         CboxAUm.FormattingEnabled = True
-        CboxAUm.Location = New Point(498, 56)
+        CboxAUm.Location = New Point(223, 108)
         CboxAUm.Name = "CboxAUm"
-        CboxAUm.Size = New Size(151, 28)
+        CboxAUm.Size = New Size(112, 45)
         CboxAUm.TabIndex = 4
         ' 
         ' RichTextBox1
         ' 
-        RichTextBox1.Location = New Point(12, 103)
+        RichTextBox1.Font = New Font("Segoe UI", 10F)
+        RichTextBox1.Location = New Point(12, 165)
         RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(449, 288)
-        RichTextBox1.TabIndex = 5
+        RichTextBox1.Size = New Size(423, 226)
+        RichTextBox1.TabIndex = 7
         RichTextBox1.Text = ""
         ' 
-        ' Button1
+        ' BtnCalcola
         ' 
-        Button1.Location = New Point(523, 156)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 29)
-        Button1.TabIndex = 6
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
+        BtnCalcola.Location = New Point(341, 57)
+        BtnCalcola.Name = "BtnCalcola"
+        BtnCalcola.Size = New Size(94, 96)
+        BtnCalcola.TabIndex = 6
+        BtnCalcola.Text = "CALCOLA"
+        BtnCalcola.UseVisualStyleBackColor = True
         ' 
         ' UnitaDiMisura
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(Button1)
+        ClientSize = New Size(451, 450)
+        Controls.Add(BtnCalcola)
         Controls.Add(RichTextBox1)
         Controls.Add(CboxAUm)
         Controls.Add(CboxDaUm)
@@ -99,5 +106,5 @@ Partial Class UnitaDiMisura
     Friend WithEvents CboxDaUm As ComboBox
     Friend WithEvents CboxAUm As ComboBox
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnCalcola As Button
 End Class

@@ -30,7 +30,7 @@ Public Class UnitaDiMisura
         'CboxAUm.SelectedIndex = 1
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BtnCalcola_Click(sender As Object, e As EventArgs) Handles BtnCalcola.Click
         Dim value As Double
         Calcola()
         Exit Sub
@@ -67,6 +67,8 @@ Public Class UnitaDiMisura
         risultato = iniziale / coefficienteDa * coefficienteA
 
         TxtAVal.Text = risultato.ToString("G", New CultureInfo("it-IT"))
+        TxtDaVal.Focus()
+        TxtDaVal.SelectAll()
     End Sub
 
     Private Sub CambiaPuntoInVirgola(sender As Object, e As KeyPressEventArgs) Handles TxtDaVal.KeyPress, TxtAVal.KeyPress
@@ -92,5 +94,23 @@ Public Class UnitaDiMisura
         End If
     End Sub
 
+    Private Sub TxtDaVal_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtDaVal.KeyDown
+        If e.KeyCode = Keys.Enter Then Calcola() : e.Handled = True : e.SuppressKeyPress = True
+    End Sub
 
+    Private Sub PremiInvioCbox(sender As Object, e As KeyEventArgs) Handles CboxDaUm.KeyDown, CboxAUm.KeyDown
+        Dim cb As ComboBox
+        cb = sender
+        If e.KeyCode = Keys.Enter Then
+            Calcola()
+            e.Handled = True
+            'affinchè non faccia il suono di errore quando premo invio sul combobox chiuso, devo mettere true
+            'ma devo mettere false quando è aperto per poter selezionare con la tastiera
+            If cb.DroppedDown Then e.SuppressKeyPress = False Else e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    Private Sub CboxDaUm_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboxDaUm.SelectedIndexChanged, CboxAUm.SelectedIndexChanged, TxtDaVal.TextChanged
+        TxtAVal.Text = ""
+    End Sub
 End Class
