@@ -28,6 +28,7 @@ Partial Class UnitaDiMisura
         CboxAUm = New ComboBox()
         RtbStorico = New RichTextBox()
         BtnCalcola = New Button()
+        BtnEsci = New Button()
         SuspendLayout()
         ' 
         ' TxtDaVal
@@ -81,20 +82,32 @@ Partial Class UnitaDiMisura
         BtnCalcola.Name = "BtnCalcola"
         BtnCalcola.Size = New Size(94, 96)
         BtnCalcola.TabIndex = 6
-        BtnCalcola.Text = "CALCOLA"
+        BtnCalcola.Text = "&CALCOLA"
         BtnCalcola.UseVisualStyleBackColor = True
+        ' 
+        ' BtnEsci
+        ' 
+        BtnEsci.Location = New Point(341, 409)
+        BtnEsci.Name = "BtnEsci"
+        BtnEsci.Size = New Size(94, 29)
+        BtnEsci.TabIndex = 8
+        BtnEsci.Text = "&Esci"
+        BtnEsci.UseVisualStyleBackColor = True
         ' 
         ' UnitaDiMisura
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        CancelButton = BtnEsci
         ClientSize = New Size(451, 450)
+        Controls.Add(BtnEsci)
         Controls.Add(BtnCalcola)
         Controls.Add(RtbStorico)
         Controls.Add(CboxAUm)
         Controls.Add(CboxDaUm)
         Controls.Add(TxtAVal)
         Controls.Add(TxtDaVal)
+        MaximizeBox = False
         Name = "UnitaDiMisura"
         Text = "UnitaDiMisura"
         ResumeLayout(False)
@@ -107,4 +120,5 @@ Partial Class UnitaDiMisura
     Friend WithEvents CboxAUm As ComboBox
     Friend WithEvents RtbStorico As RichTextBox
     Friend WithEvents BtnCalcola As Button
+    Friend WithEvents BtnEsci As Button
 End Class

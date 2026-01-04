@@ -115,4 +115,8 @@ Public Class UnitaDiMisura
     Private Sub CboxDaUm_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboxDaUm.SelectedIndexChanged, CboxAUm.SelectedIndexChanged, TxtDaVal.TextChanged
         TxtAVal.Text = ""
     End Sub
+
+    Private Sub BtnEsci_Click(sender As Object, e As EventArgs) Handles BtnEsci.Click
+        Me.Close()
+    End Sub
 End Class
