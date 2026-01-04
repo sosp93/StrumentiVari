@@ -48,8 +48,14 @@ Public Class UnitaDiMisura
     End Sub
 
     Private Sub Calcola()
+        'controlli
         If CboxDaUm.SelectedItem Is Nothing Then MsgBox("Unità misura di partenza non selezionata: imposto kg", vbExclamation) : CboxDaUm.SelectedItem = "kg"
         If CboxAUm.SelectedIndex < 0 Then MsgBox("Unità misura di destinazione non selezionata: imposto N", vbExclamation) : CboxAUm.SelectedItem = "N"
+        If Not IsNumeric(TxtDaVal.Text) Then
+            MsgBox("Inserisci un valore da convertire." & vbCrLf & "Sono accettati solamente numeri.", vbExclamation, "Errore valore")
+            TxtDaVal.SelectAll()
+            Exit Sub
+        End If
 
         Dim coefficienteDa, coefficienteA As Double
         Dim iniziale, risultato As Double
