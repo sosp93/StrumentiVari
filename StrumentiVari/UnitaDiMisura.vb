@@ -44,7 +44,7 @@ Public Class UnitaDiMisura
                 MsgBox("ciao")
             End If
         End Try
-        RichTextBox1.Text = value
+        RtbStorico.Text = value
     End Sub
 
     Private Sub Calcola()
@@ -67,6 +67,8 @@ Public Class UnitaDiMisura
         risultato = iniziale / coefficienteDa * coefficienteA
 
         TxtAVal.Text = risultato.ToString("G", New CultureInfo("it-IT"))
+        RtbStorico.Text = iniziale.ToString("G", New CultureInfo("it-IT")) & CboxDaUm.SelectedItem & " = " _
+            & TxtAVal.Text & CboxAUm.SelectedItem & vbCrLf & RtbStorico.Text
         TxtDaVal.Focus()
         TxtDaVal.SelectAll()
     End Sub

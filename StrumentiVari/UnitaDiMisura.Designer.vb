@@ -26,7 +26,7 @@ Partial Class UnitaDiMisura
         TxtAVal = New TextBox()
         CboxDaUm = New ComboBox()
         CboxAUm = New ComboBox()
-        RichTextBox1 = New RichTextBox()
+        RtbStorico = New RichTextBox()
         BtnCalcola = New Button()
         SuspendLayout()
         ' 
@@ -66,14 +66,14 @@ Partial Class UnitaDiMisura
         CboxAUm.Size = New Size(112, 45)
         CboxAUm.TabIndex = 4
         ' 
-        ' RichTextBox1
+        ' RtbStorico
         ' 
-        RichTextBox1.Font = New Font("Segoe UI", 10F)
-        RichTextBox1.Location = New Point(12, 165)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(423, 226)
-        RichTextBox1.TabIndex = 7
-        RichTextBox1.Text = ""
+        RtbStorico.Font = New Font("Segoe UI", 10F)
+        RtbStorico.Location = New Point(12, 165)
+        RtbStorico.Name = "RtbStorico"
+        RtbStorico.Size = New Size(423, 226)
+        RtbStorico.TabIndex = 7
+        RtbStorico.Text = ""
         ' 
         ' BtnCalcola
         ' 
@@ -90,7 +90,7 @@ Partial Class UnitaDiMisura
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(451, 450)
         Controls.Add(BtnCalcola)
-        Controls.Add(RichTextBox1)
+        Controls.Add(RtbStorico)
         Controls.Add(CboxAUm)
         Controls.Add(CboxDaUm)
         Controls.Add(TxtAVal)
@@ -105,6 +105,6 @@ Partial Class UnitaDiMisura
     Friend WithEvents TxtAVal As TextBox
     Friend WithEvents CboxDaUm As ComboBox
     Friend WithEvents CboxAUm As ComboBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents RtbStorico As RichTextBox
     Friend WithEvents BtnCalcola As Button
 End Class
