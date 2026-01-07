@@ -27,7 +27,7 @@ Public Class UnitaDiMisura
             'RichTextBox1.Text = RichTextBox1.Text & vbCrLf & item.ToString & " - CHIAVE" & item.Key & " - VALORE " & item.Value
         Next
         CboxDaUm.SelectedIndex = 0
-        'CboxAUm.SelectedIndex = 1
+        CboxAUm.SelectedIndex = 1
     End Sub
 
     Private Sub BtnCalcola_Click(sender As Object, e As EventArgs) Handles BtnCalcola.Click

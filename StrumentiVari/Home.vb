@@ -3,7 +3,7 @@
         MsgBox("Benvenuto!", vbOKOnly, "Placeholder")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BtnConvertitore_Click(sender As Object, e As EventArgs) Handles BtnConvertitore.Click
         UnitaDiMisura.Show()
     End Sub
 End Class
