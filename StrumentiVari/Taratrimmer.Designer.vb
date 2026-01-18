@@ -64,7 +64,7 @@ Partial Class Taratrimmer
         BtnValDesModifica.Location = New Point(148, 139)
         BtnValDesModifica.Name = "BtnValDesModifica"
         BtnValDesModifica.Size = New Size(125, 29)
-        BtnValDesModifica.TabIndex = 2
+        BtnValDesModifica.TabIndex = 30
         BtnValDesModifica.Text = "Modifica"
         BtnValDesModifica.UseVisualStyleBackColor = True
         ' 
@@ -73,8 +73,9 @@ Partial Class Taratrimmer
         TxtFsDesiderato.Font = New Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold)
         TxtFsDesiderato.Location = New Point(148, 85)
         TxtFsDesiderato.Name = "TxtFsDesiderato"
+        TxtFsDesiderato.ReadOnly = True
         TxtFsDesiderato.Size = New Size(125, 51)
-        TxtFsDesiderato.TabIndex = 1
+        TxtFsDesiderato.TabIndex = 2
         ' 
         ' LblFsDesiderato
         ' 
@@ -90,6 +91,7 @@ Partial Class Taratrimmer
         TxtZeroDesiderato.Font = New Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold)
         TxtZeroDesiderato.Location = New Point(148, 28)
         TxtZeroDesiderato.Name = "TxtZeroDesiderato"
+        TxtZeroDesiderato.ReadOnly = True
         TxtZeroDesiderato.Size = New Size(125, 51)
         TxtZeroDesiderato.TabIndex = 1
         ' 
@@ -112,7 +114,7 @@ Partial Class Taratrimmer
         GBoxValoriAttuali.Location = New Point(12, 197)
         GBoxValoriAttuali.Name = "GBoxValoriAttuali"
         GBoxValoriAttuali.Size = New Size(279, 183)
-        GBoxValoriAttuali.TabIndex = 0
+        GBoxValoriAttuali.TabIndex = 1
         GBoxValoriAttuali.TabStop = False
         GBoxValoriAttuali.Text = "Valori attuali"
         ' 
@@ -121,7 +123,7 @@ Partial Class Taratrimmer
         BtnCalcola.Location = New Point(148, 148)
         BtnCalcola.Name = "BtnCalcola"
         BtnCalcola.Size = New Size(125, 29)
-        BtnCalcola.TabIndex = 2
+        BtnCalcola.TabIndex = 30
         BtnCalcola.Text = "Calcola"
         BtnCalcola.UseVisualStyleBackColor = True
         ' 
@@ -131,7 +133,7 @@ Partial Class Taratrimmer
         TxtFsAttuale.Location = New Point(148, 83)
         TxtFsAttuale.Name = "TxtFsAttuale"
         TxtFsAttuale.Size = New Size(125, 51)
-        TxtFsAttuale.TabIndex = 1
+        TxtFsAttuale.TabIndex = 20
         ' 
         ' LblFsAttuale
         ' 
@@ -170,7 +172,7 @@ Partial Class Taratrimmer
         GBoxDaTrovare.Location = New Point(12, 386)
         GBoxDaTrovare.Name = "GBoxDaTrovare"
         GBoxDaTrovare.Size = New Size(279, 195)
-        GBoxDaTrovare.TabIndex = 0
+        GBoxDaTrovare.TabIndex = 2
         GBoxDaTrovare.TabStop = False
         GBoxDaTrovare.Text = "Valori attuali"
         ' 
@@ -188,8 +190,9 @@ Partial Class Taratrimmer
         TxtFsDaTrovare.Font = New Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold)
         TxtFsDaTrovare.Location = New Point(148, 128)
         TxtFsDaTrovare.Name = "TxtFsDaTrovare"
+        TxtFsDaTrovare.ReadOnly = True
         TxtFsDaTrovare.Size = New Size(125, 51)
-        TxtFsDaTrovare.TabIndex = 1
+        TxtFsDaTrovare.TabIndex = 20
         TxtFsDaTrovare.Text = "12,50"
         TxtFsDaTrovare.TextAlign = HorizontalAlignment.Center
         ' 
@@ -208,8 +211,9 @@ Partial Class Taratrimmer
         TxtZeroDaTrovare.Font = New Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold)
         TxtZeroDaTrovare.Location = New Point(148, 71)
         TxtZeroDaTrovare.Name = "TxtZeroDaTrovare"
+        TxtZeroDaTrovare.ReadOnly = True
         TxtZeroDaTrovare.Size = New Size(125, 51)
-        TxtZeroDaTrovare.TabIndex = 1
+        TxtZeroDaTrovare.TabIndex = 10
         TxtZeroDaTrovare.Text = "12,50"
         TxtZeroDaTrovare.TextAlign = HorizontalAlignment.Center
         ' 
