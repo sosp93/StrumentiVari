@@ -76,6 +76,8 @@ Partial Class Taratrimmer
         TxtFsDesiderato.ReadOnly = True
         TxtFsDesiderato.Size = New Size(125, 51)
         TxtFsDesiderato.TabIndex = 2
+        TxtFsDesiderato.Text = "7,34"
+        TxtFsDesiderato.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblFsDesiderato
         ' 
@@ -94,6 +96,8 @@ Partial Class Taratrimmer
         TxtZeroDesiderato.ReadOnly = True
         TxtZeroDesiderato.Size = New Size(125, 51)
         TxtZeroDesiderato.TabIndex = 1
+        TxtZeroDesiderato.Text = "1,00"
+        TxtZeroDesiderato.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblZeroDesiderato
         ' 
@@ -134,6 +138,7 @@ Partial Class Taratrimmer
         TxtFsAttuale.Name = "TxtFsAttuale"
         TxtFsAttuale.Size = New Size(125, 51)
         TxtFsAttuale.TabIndex = 20
+        TxtFsAttuale.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblFsAttuale
         ' 
@@ -151,6 +156,7 @@ Partial Class Taratrimmer
         TxtZeroAttuale.Name = "TxtZeroAttuale"
         TxtZeroAttuale.Size = New Size(125, 51)
         TxtZeroAttuale.TabIndex = 1
+        TxtZeroAttuale.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblZeroAttuale
         ' 
