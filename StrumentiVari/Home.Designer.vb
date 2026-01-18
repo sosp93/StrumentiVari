@@ -24,6 +24,7 @@ Partial Class Home
     Private Sub InitializeComponent()
         BtnSaluta = New Button()
         BtnConvertitore = New Button()
+        BtnTaratrimmer = New Button()
         SuspendLayout()
         ' 
         ' BtnSaluta
@@ -44,11 +45,21 @@ Partial Class Home
         BtnConvertitore.Text = "Convertitore"
         BtnConvertitore.UseVisualStyleBackColor = True
         ' 
+        ' BtnTaratrimmer
+        ' 
+        BtnTaratrimmer.Location = New Point(34, 140)
+        BtnTaratrimmer.Name = "BtnTaratrimmer"
+        BtnTaratrimmer.Size = New Size(139, 44)
+        BtnTaratrimmer.TabIndex = 2
+        BtnTaratrimmer.Text = "Tara trimmer"
+        BtnTaratrimmer.UseVisualStyleBackColor = True
+        ' 
         ' Home
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(BtnTaratrimmer)
         Controls.Add(BtnConvertitore)
         Controls.Add(BtnSaluta)
         Name = "Home"
@@ -58,5 +69,6 @@ Partial Class Home
 
     Friend WithEvents BtnSaluta As Button
     Friend WithEvents BtnConvertitore As Button
+    Friend WithEvents BtnTaratrimmer As Button
 
 End Class
