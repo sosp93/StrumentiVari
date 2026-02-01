@@ -8,8 +8,8 @@ Public Class Taratrimmer
 
     Private Sub Taratrimmer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         modificaInCorso = False
-        zero = 1.0
-        fs = 7.34
+        zero = 1.0 'desiderato
+        fs = 7.34 'desiderato
         diffDesiderata = 6.34
     End Sub
 
@@ -32,11 +32,15 @@ Public Class Taratrimmer
             GBoxValoriAttuali.Enabled = True
             TxtZeroDesiderato.ReadOnly = True
             TxtFsDesiderato.ReadOnly = True
+            BtnValDesModifica.Text = "Modifica"
+            TxtZeroAttuale.Focus()
         Else
             modificaInCorso = True 'modifica iniziata
+            cancellaCampi()
             GBoxValoriAttuali.Enabled = False
             TxtZeroDesiderato.ReadOnly = False
             TxtFsDesiderato.ReadOnly = False
+            BtnValDesModifica.Text = "Conferma"
             TxtZeroDesiderato.Focus()
         End If
     End Sub
