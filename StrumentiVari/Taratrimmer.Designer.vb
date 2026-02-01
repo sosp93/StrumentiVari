@@ -75,7 +75,7 @@ Partial Class Taratrimmer
         TxtFsDesiderato.Name = "TxtFsDesiderato"
         TxtFsDesiderato.ReadOnly = True
         TxtFsDesiderato.Size = New Size(125, 51)
-        TxtFsDesiderato.TabIndex = 2
+        TxtFsDesiderato.TabIndex = 20
         TxtFsDesiderato.Text = "7,34"
         TxtFsDesiderato.TextAlign = HorizontalAlignment.Center
         ' 
@@ -95,7 +95,7 @@ Partial Class Taratrimmer
         TxtZeroDesiderato.Name = "TxtZeroDesiderato"
         TxtZeroDesiderato.ReadOnly = True
         TxtZeroDesiderato.Size = New Size(125, 51)
-        TxtZeroDesiderato.TabIndex = 1
+        TxtZeroDesiderato.TabIndex = 10
         TxtZeroDesiderato.Text = "1,00"
         TxtZeroDesiderato.TextAlign = HorizontalAlignment.Center
         ' 
@@ -180,7 +180,7 @@ Partial Class Taratrimmer
         GBoxDaTrovare.Size = New Size(279, 195)
         GBoxDaTrovare.TabIndex = 2
         GBoxDaTrovare.TabStop = False
-        GBoxDaTrovare.Text = "Valori attuali"
+        GBoxDaTrovare.Text = "Da trovare"
         ' 
         ' Label3
         ' 
@@ -241,6 +241,7 @@ Partial Class Taratrimmer
         Controls.Add(GBoxDaTrovare)
         Controls.Add(GBoxValoriAttuali)
         Controls.Add(GBoxValoriDesiderati)
+        KeyPreview = True
         Name = "Taratrimmer"
         Text = "Taratrimmer"
         GBoxValoriDesiderati.ResumeLayout(False)
