@@ -44,6 +44,8 @@ Public Class Taratrimmer
     Private Sub Calcola()
         Dim zeroAttuale, fsAttuale, diffAttuale, rapporto As Double
         Dim zeroFinale, fsFinale As Double
+        CancellaCampi(True, False)
+        Try
         zeroAttuale = CDbl(TxtZeroAttuale.Text)
         fsAttuale = CDbl(TxtFsAttuale.Text)
         diffAttuale = fsAttuale - zeroAttuale
@@ -52,13 +54,33 @@ Public Class Taratrimmer
         zeroFinale = zeroAttuale * rapporto
         fsFinale = fsAttuale * rapporto
 
+            TxtZeroAttuale.Text = zeroAttuale.ToString("0.000")
+            TxtFsAttuale.Text = fsAttuale.ToString("0.000")
         TxtZeroDaTrovare.Text = zeroFinale.ToString("0.000")
         TxtFsDaTrovare.Text = fsFinale.ToString("0.000")
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "ERRORE CALCOLO")
+            Exit Sub
+        End Try
     End Sub
 
     Private Sub BtnCalcola_Click(sender As Object, e As EventArgs) Handles BtnCalcola.Click
         Calcola()
 
         TxtZeroAttuale.Focus()
+    End Sub
+
+    Private Sub cancellaCampi()
+        CancellaCampi(True, True)
+    End Sub
+    Private Sub CancellaCampi(daTrovare As Boolean, attuali As Boolean)
+        If daTrovare Then
+            TxtZeroDaTrovare.Text = "-"
+            TxtFsDaTrovare.Text = "-"
+        End If
+        If attuali Then
+            TxtZeroAttuale.Text = ""
+            TxtFsAttuale.Text = ""
+        End If
     End Sub
 End Class
