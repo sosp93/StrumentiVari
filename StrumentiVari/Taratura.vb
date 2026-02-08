@@ -23,13 +23,14 @@
         Dim i As Short
         Dim s As String
         If cifre = 0 Then
-            s = "0"
+            stringaFormatoValori = "0"
             Return True
         ElseIf cifre >= 0 Then
             s = "0."
             For i = 1 To cifre
                 s &= "0"
             Next
+            stringaFormatoValori = s
             Return True
         End If
         Return False
