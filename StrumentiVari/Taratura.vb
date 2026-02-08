@@ -8,6 +8,13 @@
         Me.fsDesiderato = fondoscala
         Me.diffDesiderata = fsDesiderato - zeroDesiderato
     End Sub
+    Public Sub New(zeroString As String, fondoscalaString As String)
+        If Not IsNumeric(zeroString) Then Throw New System.Exception("Zero non è un valore numerico")
+        If Not IsNumeric(fondoscalaString) Then Throw New System.Exception("Fondoscala non è un valore numerico")
+        Me.zeroDesiderato = CDbl(zeroString)
+        Me.fsDesiderato = CDbl(fondoscalaString)
+        Me.diffDesiderata = fsDesiderato - zeroDesiderato
+    End Sub
 
     Private Function getRapportoTaratura(zeroAttuale As Double, fsAttuale As Double)
         Return diffDesiderata / (fsAttuale - zeroAttuale)
