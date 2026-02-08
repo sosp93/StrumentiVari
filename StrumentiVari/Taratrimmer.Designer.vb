@@ -199,7 +199,7 @@ Partial Class Taratrimmer
         TxtFsDaTrovare.ReadOnly = True
         TxtFsDaTrovare.Size = New Size(125, 51)
         TxtFsDaTrovare.TabIndex = 20
-        TxtFsDaTrovare.Text = "12,50"
+        TxtFsDaTrovare.Text = "--,--"
         TxtFsDaTrovare.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblFsDaTrovare
@@ -220,7 +220,7 @@ Partial Class Taratrimmer
         TxtZeroDaTrovare.ReadOnly = True
         TxtZeroDaTrovare.Size = New Size(125, 51)
         TxtZeroDaTrovare.TabIndex = 10
-        TxtZeroDaTrovare.Text = "12,50"
+        TxtZeroDaTrovare.Text = "--,--"
         TxtZeroDaTrovare.TextAlign = HorizontalAlignment.Center
         ' 
         ' LblZeroDaTrovare
