@@ -16,18 +16,18 @@
         Me.diffDesiderata = fsDesiderato - zeroDesiderato
     End Sub
 
-    Private Function getRapportoTaratura(zeroAttuale As Double, fsAttuale As Double)
+    Private Function getRapportoTaratura(zeroAttuale As Double, fsAttuale As Double) As Double
         Return diffDesiderata / (fsAttuale - zeroAttuale)
     End Function
 
-    Public Function daTrovareFs(zeroAttuale As Double, fsAttuale As Double)
+    Public Function daTrovareFs(zeroAttuale As Double, fsAttuale As Double) As Double
         'Dim diffAttuale As Double
         'diffAttuale = fsAttuale - zeroAttuale
         'Return fsAttuale / diffAttuale * diffDesiderata
         Return fsAttuale * getRapportoTaratura(zeroAttuale, fsAttuale)
     End Function
 
-    Public Function daTrovareZero(zeroAttuale As Double, fsAttuale As Double)
+    Public Function daTrovareZero(zeroAttuale As Double, fsAttuale As Double) As Double
         Return zeroAttuale * getRapportoTaratura(zeroAttuale, fsAttuale)
     End Function
 
