@@ -3,14 +3,11 @@ Imports System.Drawing.Text
 
 Public Class Taratrimmer
     Private modificaInCorso As Boolean
-    Private zero, fs As Double
-    Private diffDesiderata As Double
+    Private taratura As Taratura
 
     Private Sub Taratrimmer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         modificaInCorso = False
-        zero = 1.0 'desiderato
-        fs = 7.34 'desiderato
-        diffDesiderata = 6.34
+        taratura = New Taratura(1.0, 7.34)
     End Sub
 
     Private Sub Taratrimmer_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -20,14 +17,18 @@ Public Class Taratrimmer
     Private Sub Modifica() Handles BtnValDesModifica.Click
         If modificaInCorso Then
             Dim z, f As String
+            Dim zero, fs As Double
             z = TxtZeroDesiderato.Text
-            fs = TxtFsDesiderato.Text
+            f = TxtFsDesiderato.Text
             'controllo che i due valori siano numerici
             If Not IsNumeric(z) Then MsgBox("Correggi il valore di zero.", vbAbort, "Necessario valore numerico") : Exit Sub
-            If Not IsNumeric(fs) Then MsgBox("Correggi il valore di zero.", vbAbort, "Necessario valore numerico") : Exit Sub
+            If Not IsNumeric(f) Then MsgBox("Correggi il valore di zero.", vbAbort, "Necessario valore numerico") : Exit Sub
             'salvo i numeri nelle variabili
             zero = CDbl(z)
-            fs = CDbl(fs)
+            fs = CDbl(f)
+            'Sostituisco la classe Taratura
+            taratura = New Taratura(zero, fs)
+
             'riscrivo i valori così come arrivano dalle variabili
             TxtZeroDesiderato.Text = zero.ToString("#0.00")
             TxtFsDesiderato.Text = fs.ToString("#0.00")
@@ -50,17 +51,15 @@ Public Class Taratrimmer
     End Sub
 
     Private Sub Calcola()
-        Dim zeroAttuale, fsAttuale, diffAttuale, rapporto As Double
+        Dim zeroAttuale, fsAttuale As Double
         Dim zeroFinale, fsFinale As Double
         CancellaCampi(True, False)
         Try
             zeroAttuale = CDbl(TxtZeroAttuale.Text)
             fsAttuale = CDbl(TxtFsAttuale.Text)
-            diffAttuale = fsAttuale - zeroAttuale
 
-            rapporto = diffDesiderata / diffAttuale
-            zeroFinale = zeroAttuale * rapporto
-            fsFinale = fsAttuale * rapporto
+            zeroFinale = taratura.daTrovareZero(zeroAttuale, fsAttuale) 'zeroAttuale * rapporto
+            fsFinale = taratura.daTrovareFs(zeroAttuale, fsAttuale) 'fsAttuale * rapporto
 
             TxtZeroAttuale.Text = zeroAttuale.ToString("0.000")
             TxtFsAttuale.Text = fsAttuale.ToString("0.000")
